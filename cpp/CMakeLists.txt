@@ -4,4 +4,5 @@ add_subdirectory(arrays)
 add_subdirectory(linked_lists)
 add_subdirectory(recursions)
 add_subdirectory(trees)
-
+add_subdirectory(exercises)
+add_subdirectory(heaps)

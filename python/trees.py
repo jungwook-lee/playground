@@ -19,6 +19,18 @@ def post_order_print(root):
         print(root.data)
 
 
+def get_max_depth(root, depth=0):
+    if root:
+        l_depth = get_max_depth(root.left, depth+1)
+        r_depth = get_max_depth(root.right, depth+1)
+        if l_depth >= r_depth:
+    	    return l_depth
+        else:
+            return r_depth
+    else:
+        return depth-1
+
+
 class Node(object):
     def __init__(self, data=None, left=None, right=None):
         self.left = left
