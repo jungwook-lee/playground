@@ -23,11 +23,20 @@ def stringbuilder(words):
 def stringbuilder_better(words):
     return ''.join([words[i] for i in xrange(len(words))])
 
+def stringbuilder_best(words):
+    return ''.join(words)
+
 
 if __name__ == '__main__':
-    words = ['01010100010100010001010' for _ in xrange(10000)]
+    # Test
+    words = ['dog', 'cat', 'mouse']
+    print(stringbuilder_better(words))
+    print(stringbuilder_best(words))
 
+
+    words = ['01010100010100010001010100001000101010100101001010' for _ in xrange(10000)]
     print (timeit.timeit(stringbuilder(words)))
     print (timeit.timeit(stringbuilder_better(words)))
+    print (timeit.timeit(stringbuilder_best(words)))
 
 

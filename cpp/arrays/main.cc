@@ -1,5 +1,9 @@
 // Array practice from http://www.cplusplus.com/doc/tutorial/arrays/
 #include <iostream>
+
+#include "dynamic_array.h"
+#include "dynamic_array.cc"
+
 using namespace std;
 
 // Testing array as function input
@@ -11,7 +15,7 @@ void print_array(int arg[], int arr_size) {
   return;
 }
 
-int main() {
+void test_cpp_arrays() {
   // Implement an array in C++ (random initialization)
   const int arr_size = 5;
   int foo0 [arr_size];
@@ -49,4 +53,27 @@ int main() {
   // Call a function with an array input
   int bar1 [4];
   print_array(bar1, sizeof(bar1)/sizeof(int));
+}
+
+int main() {
+    // Test cpp array types
+    test_cpp_arrays();
+
+    // Test Dynamic Array Implementation
+    DynamicArray d_arr;
+    cout << d_arr.get_size() << endl;
+
+    d_arr.append(0);
+    d_arr.append(1);
+    d_arr.append(2);
+    d_arr.append(3);
+    d_arr.append(4);
+    d_arr.append(5);
+    d_arr.append(6);
+    d_arr.append(255);
+
+    cout << d_arr.get_size() << endl;
+    cout << d_arr.get_item(7) << endl;
+
+    return 0;
 }
