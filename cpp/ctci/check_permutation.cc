@@ -34,7 +34,7 @@ int main () {
     string test = "aaabbc";
     string test1 = "ababac";
     string test2 = "ababab";
-    string test3 = "ababa";
+    string test3 = "abab";
 
     cout << check_permutation(test, test1) << endl;
     cout << check_permutation(test, test2) << endl;
