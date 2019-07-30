@@ -6,5 +6,5 @@ add_definitions(-Werror) # stop compile on warning
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_GLIBCXX_DEBUG")
 
-set(SOURCE_FILES main.cc)
-add_executable(is_unique ${SOURCE_FILES})
+add_executable(is_unique is_unique.cc)
+add_executable(check_permutation check_permutation.cc)
