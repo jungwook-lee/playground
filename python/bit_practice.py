@@ -1,7 +1,3 @@
-import sys
-
-# Test bit manipulation in python
-
 # Python Natively only has logical shifts
 def repeatedArithmeticShift(var, count=40):
     for i in range(count):
