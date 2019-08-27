@@ -1,7 +1,5 @@
-class Node(object):
-    def __init__(self, data=None, next=None):
-        self.data = data
-        self.next = next
+from python.data_structure.node import Node
+from python.data_structure.node import print_list
 
 def remove_dups(list):
     # Early Exit if invalid list
@@ -22,14 +20,6 @@ def remove_dups(list):
             hash[cur.data] = True
             cur = cur.next
             prev = prev.next
-
-
-def print_list(list):
-    cur = list
-    while cur != None:
-        print(cur.data),
-        cur = cur.next
-    print
 
 if __name__ == '__main__':
     # 1 -> 2 -> 3 -> 1 -> None
