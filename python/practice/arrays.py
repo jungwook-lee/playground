@@ -26,5 +26,5 @@ del a[3]
 print(a)
 
 del a
+# Should Throw an error here
 print(a)
-
