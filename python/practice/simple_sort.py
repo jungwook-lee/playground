@@ -14,6 +14,17 @@ def bubble_sort(data):
             return
         swap = False
 
+def recursive_bubble_sort(data, i):
+    # Base case
+    if i == 0:
+        return
+    # Move the largest element to i
+    for j in range(i):
+        if data[j] > data[i]:
+            data[i], data[j] = data[j], data[i]
+    # Recursive case
+    recursive_bubble_sort(data, i-1)
+
 def selection_sort(data):
     for i in range(len(data) - 1):
         # use i to keep track of sorted section
@@ -33,6 +44,11 @@ if __name__ == '__main__':
     sample = random.sample(range(100), 20)
     print(sample)
     bubble_sort(sample)
+    print(sample)
+
+    sample = random.sample(range(100), 20)
+    print(sample)
+    recursive_bubble_sort(sample, len(sample) - 1)
     print(sample)
 
     sample = random.sample(range(100), 20)
