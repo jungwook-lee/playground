@@ -36,10 +36,6 @@ def selection_sort(data):
         # Swap between min_j and i
         data[i], data[min_i] = data[min_i], data[i]
 
-def insertion_sort(data):
-    pass
-
-
 if __name__ == '__main__':
     sample = random.sample(range(100), 20)
     print(sample)
