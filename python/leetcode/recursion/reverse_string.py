@@ -4,6 +4,7 @@ Do not allocate extra space for another array, you must do this by modifying the
 You may assume all the characters consist of printable ascii characters.
 """
 
+# Iterative Version
 def reserse_string(str):
     if len(str) < 1:
         return
