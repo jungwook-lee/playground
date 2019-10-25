@@ -1,12 +1,4 @@
-class Node(object):
-    def __init__(self, data=None, next=None):
-        self.data = data
-        self.next = next
-
-def make_node(i):
-    if i == 0:
-        return Node(0, None)
-    return Node(i, make_node(i - 1))
+import node as nd
 
 # # O(n^2) solution, very bad
 # def reverseList(head):
@@ -48,14 +40,10 @@ def reverseList_iter(head):
     return head
 
 if __name__ == '__main__':
-    c_node = make_node(3)
+    c_node = nd.make_node([0, 1, 2, 3])
     c_node = reverseList(c_node)
-    while c_node != None:
-        print(c_node.data)
-        c_node = c_node.next
+    print(nd.get_data(c_node))
 
-    c_node = make_node(3)
+    c_node = nd.make_node(3)
     c_node = reverseList_iter(c_node)
-    while c_node != None:
-        print(c_node.data)
-        c_node = c_node.next
+    print(nd.get_data(c_node))
