@@ -23,4 +23,3 @@ def twoSum(nums, target):
         if nums[i] in diff:
             return [i, diff[nums[i]]]
         diff[complement] = i
-        
