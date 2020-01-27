@@ -21,6 +21,8 @@ class Tree(object):
         # Exit when list is too big
         if i >= len(x):
             return None
+        if x[i] is None:
+            return None
         # Add the new node
         new_node = TreeNode(x[i])
         # Insert insert left, right
@@ -69,3 +71,4 @@ if __name__ == '__main__':
     t = Tree(t_in)
 
     print(isSubtree(s.head, t.head))
+    print(s.print_tree())
