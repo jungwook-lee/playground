@@ -37,7 +37,7 @@ class Tree(object):
             
         def print_h(head):
             if head is None:
-                return
+                print('None')
             else:
                 print(head)
                 print_h(head.left)
